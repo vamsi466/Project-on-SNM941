@@ -1,0 +1,112 @@
+<!-- network configuration page starts here -->
+<div>
+    <!-- title of the page goes here -->
+    <div class = 'mod-content-header'>
+        <h3 class="mod-content-title">Network Configurations</h3>
+        <small>Subheader should go here ...</small>
+    </div>
+    <!-- card for connections table  -->
+    <md-card class="card-padding">
+        <md-card-title>
+            <!-- title of the card goes here -->
+            <md-card-title-text>
+                <span class="md-headline">Connections</span>
+                <span class="md-subhead top-padding small-font">Known Networks will be joined automatically</span>
+            </md-card-title-text>
+        </md-card-title>
+        <!-- ng-table for showing connections details in a table -->
+        <md-card-actions layout="column" class="zero-margin">
+            <div>
+                <table ng-table="networkConfig.connectionTable" class="table table-striped lefttext table-format ng-table-responsive ">
+                    <tr ng-repeat="connection  in $data">
+                        <td><i class="material-icons iconFont ">network_cell</i></td>
+                        <td data-title="'Modem type'">{{connection.modemType}}</td>
+                        <td data-title="'EMEI'">{{connection.emei}}</td>
+                        <td data-title="'Carrier'">{{connection.carrier}}</td>
+                        <td data-title="'Mode'">{{connection.mode}}</td>
+                        <td class="text-right">
+                            <span><i class="material-icons iconFont">mode_edit</i></span>
+                            <span><i class="material-icons iconFont" ng-click="networkConfig.showdeleteConform($event)">delete</i></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </md-card-actions>
+        <!-- table for network details -->
+        <md-card-actions layout="column" class="zero-margin top-margin">
+            <div class="text-right right-padding">
+                <md-icon><span><i class="material-icons iconFont">mode_edit</i></span></md-icon>
+                <md-icon ng-click="networkConfig.showAddWifi($event)"><span><i class="material-icons iconFont">add_box</i></span></md-icon>
+            </div>
+            <div>
+                <table ng-table="networkConfig.networkTypeTable" class="table table-striped lefttext table-format ng-table-responsive">
+                    <tr ng-repeat="networkType  in $data">
+                        <td><i class="material-icons iconFont ">wifi</i></td>
+                        <td data-title="'Network Name'">{{networkType.networkType}}</td>
+                        <td data-title="'Security'">{{networkType.security}}</td>
+                        <td data-title="'Mode'">{{networkType.modeOfUse}}</td>
+                        <td data-title="'Frequency'">{{networkType.frequency}}</td>
+                        <td data-title="'Mode'">{{networkType.mode}}</td>
+                        <td class="text-right">
+                            <span><i class="material-icons iconFont">mode_edit</i></span>
+                            <span><i class="material-icons iconFont" ng-click="networkConfig.showdeleteConform($event)">delete</i></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </md-card-actions>
+    </md-card>
+
+    <!-- card for service network table -->
+    <md-card class="card-padding">
+        <!-- card title goes here -->
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Service Network</span>
+                <span class="md-subhead top-padding small-font">Hover over Password</span>
+            </md-card-title-text>
+        </md-card-title>
+        <!--  -->
+        <md-card-actions layout="column" class="zero-margin">
+            <div>
+                <table ng-table="networkConfig.serviceNetwork" class="table table-striped lefttext table-format ng-table-responsive">
+                    <tr ng-repeat="serviceNetwork  in $data">
+                        <td data-title="'Network Name'">{{serviceNetwork.networkName}}</td>
+                        <td data-title="'Password'">{{serviceNetwork.password}}</td>
+                        <td data-title="'Channel'">{{serviceNetwork.numberOfChannels}}</td>
+                        <td data-title="'SSID Mode'">{{serviceNetwork.ssidMode}}</td>
+                        <td data-title="'Encryption'">{{serviceNetwork.encryption}}</td>
+                        <td class="text-right">
+                            <span><i class="material-icons iconFont">mode_edit</i></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </md-card-actions>
+    </md-card>
+    <md-card class="card-padding">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Port Forwarding 
+        <md-icon class="float-right"><i class="material-icons iconFont">add_box</i></md-icon>
+      </span>
+                <span class="md-subhead top-padding small-font">Configure up to ten ports</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="column" class="zero-margin">
+            <div>
+                <table ng-table="networkConfig.portForwarding" class="table table-striped lefttext table-format ng-table-responsive">
+                    <tr ng-repeat="portForwarding  in $data">
+                        <td data-title="'Port'">{{portForwarding.port}}</td>
+                        <td data-title="'Interface'">{{portForwarding.interface}}</td>
+                        <td data-title="'Destination'">{{portForwarding.destination}}</td>
+                        <td class="text-right">
+                            <span><i class="material-icons iconFont">mode_edit</i></span>
+                            <span><i class="material-icons iconFont" ng-click="networkConfig.showdeleteConform($event)">delete</i></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </md-card-actions>
+    </md-card>
+</div>

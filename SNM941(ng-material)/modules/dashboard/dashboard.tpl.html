@@ -1,0 +1,30 @@
+<div class = "dashboard">
+    <div class = 'mod-content-header'>
+        <h3 class='mod-content-title'>DashBoard</h3>
+    </div>
+    <md-content layout-gt-xs='row' layout-wrap>
+        <md-card ng-repeat='card in dc.cardsData' class='dashboard-card' flex-gt-sm='30' flex-sm='45' flex-xs md-theme="default">
+            <md-card-title>
+                <md-card-title-text>
+                    <div layout='row' layout-align='space-between'>
+                        <div>
+                            <span class='title'>{{card.cardtitle}}</span>
+                        </div>
+                        <span><i class="material-icons" style = 'color: #aeaeb6'>loop</i></span>
+                    </div>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content class='card-content'>
+                <table class='card-table'>
+                    <tr ng-repeat="(title,data) in card.content">
+                        <td>{{title}}</td>
+                        <td>{{data}}</td>
+                    </tr>
+                </table>
+            </md-card-content>
+            <md-card-actions ng-if='card.action' layout="row" layout-align="end center">
+                <md-button class="md-raised md-primary">{{card.action}}</md-button>
+            </md-card-actions>
+        </md-card>
+    </md-content>
+</div>

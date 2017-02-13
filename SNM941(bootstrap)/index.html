@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html data-ng-app="SNM941" data-ng-controller="mainCtrl as mactrl">
+
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <link rel='stylesheet' href='lib/CSS/ng-table.min.css'>
+	    <link rel='stylesheet' href='css/app-bootstrap.css'>
+		<link rel='stylesheet' href='css/app.css'>
+	    <link rel='stylesheet' href='css/trimble.css'>
+	    <link rel='stylesheet' href='css/trimble.2.css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	    <link rel='stylesheet' href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	</head>
+
+	<body  class = 'sw-toggled'>
+
+		<!-- <data ui-view></data> -->
+		<header id="header" data-current-skin="trimble-yellow" data-ng-include="'modules/header/header.tpl.html'" ></header>
+		<section id="main">
+			<aside id="sidebar" data-ng-include="'modules/sidenav/left-sidenav.tpl.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
+			<section id="content">
+				<ui-view></ui-view>
+			</section>
+		</section>
+		<!--<data-ng-include src= "'modules/home/home.tpl.html'"></data-ng-include>-->
+
+		<script src="lib/JS/jquery.min.js"></script>
+	    <script src='lib/JS/angular.1.6.1.js'></script>
+		<script src='lib/JS/angular-ui-router.js'></script>
+		<script src="lib/JS/ng-table.min.js"></script>
+		<script src="lib/JS/bootstrap-modal.js"></script>
+		<script src="lib/JS/dropdown.js"></script>
+		
+		
+	    <script src='js/applicationJS/app.js'></script>
+		<script src="js/applicationJS/SNM941.config.js"></script>
+		
+		<!--#### js of Dashboard component ####-->
+		<script src='modules/dashboard/dashboard.module.js'></script>
+		<script src='modules/dashboard/dashboard.controller.js'></script>
+		<script src='modules/dashboard/dashboard.service.js'></script>
+
+		<!--#### js of Network-config component ####-->
+		<script src='modules/network-configuration/network-configuration.module.js'></script>
+		<script src='modules/network-configuration/network-configuration.controller.js'></script>
+		
+		<!--#### js of Daignostics component ####-->
+		<script src='modules/daignoistics/js/daignostics.module.js'></script>
+		<script src='modules/daignoistics/js/routing.js'></script>		
+		<script src='modules/daignoistics/js/daignostics.scantool.js'></script>
+	</body>
+
+</html>

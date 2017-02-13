@@ -1,0 +1,11 @@
+{
+  "serviceNetwork": [
+    {
+      "networkName": "Dozer 3",
+      "password": "********",
+      "numberOfChannels": 9,
+      "ssidMode": "Visible",
+      "encryption": "WPA"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<md-dialog class="my-dialog" flex="60">
+  <form ng-cloak>
+    <md-dialog-content style="padding-left: 15px" >
+      <div class="md-dialog-content">
+        <h3 style="color:#464456;font-weight: 100">Are you sure you want to delete</h3>
+        
+        <div layout-gt-sm="row">
+          <md-content style="font-size: 14px">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur pellentesque ex, sed condimentum velit porttitor vel. Sed tempor pulvinar diam,vitae efficitur mauris luctus et. Nam ultrices dignissim nfrastructur.
+          </md-content>
+        </div>
+      </div>
+      
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="deleteModal.cancel()" class="md-raised "><a href="" style = 'color: #0d6aa8'>
+        Cancel</a>
+      </md-button>
+      <md-button ng-click="deleteModal.delete()" class="md-raised md-primary">
+       DELETE
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

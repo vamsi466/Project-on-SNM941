@@ -1,0 +1,96 @@
+<div class="container-fluid">
+    <div class="block-header m-t-15">
+        <h2>Network Configurations</h2>
+        <h2><small>Subheader should go here ...</small></h2>
+    </div>
+    <div ng-include src="'modules/network-configuration/templates/delete-dialog.tpl.html'"></div>
+    <div ng-include src="'modules/network-configuration/templates/add-wifi-connection-dialog.tpl.html'"></div>
+    <div class="card col-md-12 col-lg-12 col-sm-12 col-xs-12 p-l-0 p-r-0">
+        <div class="p-l-20">
+            <h4>Connections</h4>
+            <small>Known Networks will be joined automatically</small>
+        </div>
+        <table ng-table="nc.connection" class="table table-condensed table-striped nc-table ng-table-responsive">
+            <tr ng-repeat="user in $data">
+                <td><i class="zmdi zmdi-wifi-alt f-16"></i></td>
+                <td title="'Modem type'">
+                    {{user.modemType}}</td>
+                <td title="'EMEI'">
+                    {{user.emei}}</td>
+                <td title="'Carrier'">
+                    {{user.carrier}}
+                </td>
+                <td title="'Mode'">{{user.mode}}</td>
+                <td class="text-right">
+                    <span><i class="zmdi zmdi-edit f-16"></i></span>
+                    <span data-toggle="modal" data-target="#deleteData"><i class="zmdi zmdi-delete f-16"></i></span>
+                </td>
+            </tr>
+        </table>
+        <div class="text-right m-r-20 m-t-25">
+            <i class="zmdi zmdi-edit f-16"></i>
+            <i class="zmdi zmdi-plus-square f-16" data-toggle="modal" data-target="#addBox"></i>
+        </div>
+        <table ng-table="nc.network" class="table table-condensed table-striped nc-table ng-table-responsive">
+            <tr ng-repeat="user in $data">
+                <td><i class="zmdi zmdi-wifi-alt f-16"></i></td>
+                <td title="'Network Name'">
+                    {{user.networkType}}</td>
+                <td title="'Security'">
+                    {{user.security }}
+                </td>
+                <td title="'Mode'">
+                    {{user.modeOfUse}}
+                </td>
+                <td title="'Frequency'">{{user.frequency}}</td>
+                <td title="'Mode'">{{user.mode}}
+                </td>
+                <td title="" >
+                    <i class="zmdi zmdi-edit f-16"></i>
+                    <i class="zmdi zmdi-delete f-16"></i>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="card col-md-12 col-lg-12 col-sm-12 col-xs-12 p-l-0 p-r-0">
+        <div class="p-l-20">
+            <h4>Service Network</h4>
+            <small>Hover over Password</small>
+        </div>
+        <table ng-table="nc.serviceNetwork " class="table table-condensed table-striped nc-table ng-table-responsive nc-port-service-table">
+            <tr ng-repeat="user in $data ">
+                <td title="'Network Name'"> {{user.networkName}}</td>
+                <td title="'Password'">
+                    {{user.password}}
+                </td>
+                <td title="'Channel'">
+                    {{user.numberOfChannels}}
+                </td>
+                <td title=" 'SSID Mode' ">{{user.ssidMode}}</td>
+                <td title=" 'Encryption' ">{{user.encryption}}</td>
+                <td class="pull-right"><i class="zmdi zmdi-edit f-16"></i></td>
+            </tr>
+        </table>
+    </div>
+    <div class="card col-md-12 col-lg-12 col-sm-12 col-xs-12 p-l-0 p-r-0 ">
+        <div class="p-l-20">
+            <h4>Port Forwarding</h4>
+            <small>Configure up to ten ports</small>
+        </div>
+        <table ng-table="nc.portForward" class="table table-condensed ng-table-responsive nc-port-service-table table-striped nc-table">
+            <tr ng-repeat="user in $data">
+                <td title="'Port'">
+                    {{user.port}}</td>
+                <td title="'Interface'">
+                    {{user.interface}}</td>
+                <td title="'Destination'">
+                    {{user.destination }}
+                </td>
+                <td title="" >
+                    <i class="zmdi zmdi-edit f-16"></i>
+                    <i class="zmdi zmdi-delete f-16"></i>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

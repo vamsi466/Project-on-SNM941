@@ -1,0 +1,17 @@
+{
+  "portForwarding": [
+    {
+      "port": "DaVinci",
+      "interface": "WLAN",
+      "destination": "192.168.88.1:80"
+    },{
+      "port": "Survey Router",
+      "interface": "WLAN",
+      "destination": "192.168.88.1:80"
+    },{
+      "port": "Trimble GNSS 1",
+      "interface": "WLAN",
+      "destination": "192.168.88.1:80"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+<div class='rebroadcast'>
+	<div class = 'mod-content-header'>
+        <h3 class="mod-content-title">GNSS Configuration</h3>
+        <small>Subheader should go here ...</small>
+    </div>
+	
+    <md-card class = 'rebroadcast-card'>
+        <md-card-content layout='column'>
+            <div class = 'sub-block'>
+	            <h3 class = 'title'>RTK Rebroadcast</h3>
+	            <div layout = 'column' layout-gt-sm = 'row' layout-align-gt-sm = 'start end'>
+		            <table>
+		            	<tr>
+		            		<td>Current Profile:</td>
+		            		<td>unknown</td>
+		            	</tr>
+		            	<tr>
+		            		<td>Current Profile:</td>
+		            		<td>
+			            		<md-select placeholder = 'Select Option' aria-label = 'select0' ng-model = "select0" class = 'select-list'>
+									<md-option ng-repeat="state in ['Option 1', 'Option 2', 'Option 3', 'Option 4']" value="{{state}}">
+									{{state}}
+									</md-option>
+								</md-select>
+							</td>
+		            	</tr>
+		            </table>
+		            <md-button class="md-raised apply-btn">APPLY PROFILE</md-button>
+	            </div>
+            </div>
+            <md-divider></md-divider>
+            <div class = 'sub-block'>
+	            <h3 class = 'title'>New Configuration</h3>
+	            <table class = 'tr-height'>
+	            	<tr>
+	            		<td>RTK Rebroadcast:</td>
+	            		<td>
+	            			<md-radio-group layout = 'row' ng-model="radio1" class="md-primary">
+								<md-radio-button value="on" >On</md-radio-button>
+								<md-radio-button value="Off">Off</md-radio-button>
+							</md-radio-group>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td>NTRIP Status:</td>
+	            		<td>Idle</td>
+	            	</tr>
+	            </table>
+	            <div class = 'highlight gap-above'>
+	                <span>Output Corrections</span>
+	                <div layout-gt-sm='row' layout='column' layout-margin layout-align-gt-sm='start center' >
+	                    <md-checkbox ng-model="check1" aria-label="Checkbox 1">
+	                        Ethernet
+	                    </md-checkbox>
+	                    <div layout='row' layout-margin layout-align='start center' class = 'remove-margin margin-left'>
+	                        <md-checkbox ng-model="check2" aria-label="Checkbox 2">
+	                            Serial Port
+	                        </md-checkbox>
+	                        <span layout-gt-sm='row' layout='column'>
+	   							<md-select placeholder = 'Select Option' aria-label = 'select1' ng-model = "select1" class = 'select-list'>
+									<md-option ng-repeat="state in ['Option 1', 'Option 2', 'Option 3', 'Option 4']" value="{{state}}">
+									{{state}}
+									</md-option>
+								</md-select>
+								<md-select placeholder = 'Select Option' aria-label = 'select2' ng-model = "select2" class = 'select-list'>
+									<md-option ng-repeat="state in ['Option 1', 'Option 2', 'Option 3', 'Option 4']" value="{{state}}">
+									{{state}}
+									</md-option>
+								</md-select>
+								<md-select placeholder = 'Select Option' aria-label = 'select3' ng-model = "select3" class = 'select-list'>
+									<md-option ng-repeat="state in ['Option 1', 'Option 2', 'Option 3', 'Option 4']" value="{{state}}">
+									{{state}}
+									</md-option>
+								</md-select>
+								<md-select placeholder = 'Select Option' aria-label = 'select4' ng-model = "select4" class = 'select-list'>
+									<md-option ng-repeat="state in ['Option 1', 'Option 2', 'Option 3', 'Option 4']" value="{{state}}">
+									{{state}}
+									</md-option>
+								</md-select>
+	   						</span>
+	                    </div>
+	                </div>
+	            </div>
+	            <div layout='row' layout-align='start center'  class = 'highlight gap-above'>
+	                <span>Output Corrections :</span>
+	                <md-radio-group layout-gt-sm='row' layout='column' layout-margin ng-model="radio1" class="md-primary" >
+	                    <md-radio-button style = 'margin-top: 5px' value="VRS/CORS">VRS/CORS</md-radio-button>
+	                    <md-radio-button style = 'margin-top: 5px' value="IBSS">IBSS</md-radio-button>
+	                    <md-radio-button style = 'margin-top: 5px' value="Trimble CenterPoint TGIP">Trimble CenterPoint TGIP</md-radio-button>
+	                </md-radio-group>
+	            </div>
+	            <div layout='column' layout-gt-sm='row'>
+	                <input type = 'text' placeholder="Server Address" class = "input-field" ng-model="user.username">
+	                <input type = 'text' placeholder="Port Number" class = "input-field" ng-model="user.username">
+	                <input type = 'text' placeholder="MountPoint" class = "input-field" ng-model="user.username">
+	            </div>
+	            <div layout-gt-sm='row' layout='column'>
+	                
+	                    <input type = 'text' placeholder="Username" class = "input-field" ng-model="user.username">
+	                
+	                
+	                    <input type = 'text' placeholder="Password" class = "input-field" ng-model="user.password">
+	                
+	            </div>
+            </div>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-raised md-primary">SAVE NEW PROFILE</md-button>
+        </md-card-actions>
+    </md-card>
+</div>

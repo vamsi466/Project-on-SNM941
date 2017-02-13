@@ -1,0 +1,29 @@
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-sidenav-left" md-component-id="left" md-disable-backdrop ng-click="ac.sideNavToggle()">
+    <md-toolbar ui-sref = 'dashboard' class='profile-menu md-theme-indigo'>
+        <div class='profile-title'>
+            <h5 class='title'>Dozer 3</h5></div>
+        <img src='./assest/device1.png' width="100%">
+    </md-toolbar>
+    <md-content class="nav-elements" >
+        <md-list-item ui-sref = 'networkconfig'>
+            <a > <md-icon><i class="material-icons">cast_connected</i></md-icon>
+            Network Configuration </a>
+        </md-list-item>
+        <md-list-item ui-sref = 'telematic'>
+            <a > <md-icon><i class="material-icons">settings</i></md-icon>
+            Telematic Configuration </a>
+        </md-list-item>
+        <md-list-item ui-sref = 'rebroadcast'>
+                <a ><md-icon><i class="material-icons">settings</i></md-icon>
+            RTK Rebroadcast </a>
+        </md-list-item>
+        <md-list-item ui-sref = 'diagnostics'>
+                <a  ><md-icon><i class="material-icons">favorite</i></md-icon>
+            Diagnostics </a>
+        </md-list-item>
+            <md-list-item ui-sref = 'settings'>
+                <a ><md-icon><i class="material-icons">settings</i></md-icon>
+            System Settings </a>
+        </md-list-item>
+    </md-content>
+</md-sidenav>

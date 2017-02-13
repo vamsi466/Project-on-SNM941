@@ -1,0 +1,52 @@
+<md-dialog class="my-dialog" flex="50">
+  <form ng-cloak>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <h3 class="zero-margin">Add Network</h3>
+        <span class="md-subhead top-padding small-font">Please provide some guidance</span>
+        <div layout-gt-sm="row" flex flex-gt-xs="70">
+          <md-input-container class="md-block dialog-input " flex-gt-sm>
+            <input type="text" placeholder="Network Name" class="dropdown-input">
+          </md-input-container>
+            <md-input-container class="md-block dialog-input" flex-gt-sm  flex-offset-gt-sm="20">
+              <md-select ng-model="user.state" placeholder="Security" class="dropdown-input">
+                <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                  {{state.abbrev}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+        </div>
+        <div >
+            <table ng-table="addWifi.networkTypeTable" class="table table-striped lefttext table-format card-table" flex>
+                <tr ng-repeat="networkType in $data">
+                    <td data-title="'Choose a Network'">
+                      <span><i class="material-icons iconFont ">wifi</i></span>
+                      <span>{{networkType.networkType}}</span>
+                    </td>
+                    <td data-title="'Security'" >{{networkType.security}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <md-input-container class="md-block dialog-input " flex flex-sm="60" flex-gt-sm="40">
+          <input type="password" placeholder="Enter Password" class=" dropdown-input ">
+        </md-input-container >
+        <a href="" class="href-text decoration">Advanced Options</a>
+
+
+      </div>
+      
+      
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="addWifi.cancel()" class="md-raised "><a href="" class="href-text">
+        Cancel</a>
+      </md-button>
+      <md-button ng-click="addWifi.saveNetwork()" class="md-raised md-primary">
+       SAVE NETWORK
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

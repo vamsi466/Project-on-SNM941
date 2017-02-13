@@ -1,0 +1,55 @@
+<div class="content-div settings" layout-margin>
+    <div class = 'mod-content-header'>
+        <h3 class="mod-content-title">SNM941 Settings</h3>
+        <small>Subheader should go here ...</small>
+    </div>
+    <div layout-xs="column" class="settings-cards" layout="row" >
+        <md-card flex-gt-sm='33'>
+            <md-card-header>
+                <md-card-title-text>
+                    <span class="md-headline">Firmware Settings</span>
+                </md-card-title-text>
+            </md-card-header>
+            <md-card-actions class="settings-card-actions" layout="row">
+                <md-radio-group layout="column" class=" md-primary">
+                    <md-radio-button value="Apple">Enable Auto-Update</md-radio-button>
+                    <md-radio-button value="Banana"> Disable Auto-Update </md-radio-button>
+                    <md-radio-button value="Mango">Default -- behavior determined by lisence options</md-radio-button>
+                </md-radio-group>
+            </md-card-actions>
+            <md-card-actions layout="row" layout-align="end">
+                <md-button class="md-raised md-primary">SAVE</md-button>
+            </md-card-actions>
+        </md-card>
+        <md-card flex-gt-sm='33' layout="column">
+            <md-card-header>
+                <md-card-title-text>
+                    <span class="md-headline">Reboot Device</span>
+                    <div class="md-subhead">Please give more info about rebooting here</div>
+                </md-card-title-text>
+            </md-card-header>
+            <md-card-actions layout="row" layout-align="center center">
+                <md-button class="md-raised md-primary">REBOOT DEVICE</md-button>
+            </md-card-actions>
+        </md-card>
+        <md-card flex-gt-sm='33'>
+            <md-card-header>
+                <md-card-title-text>
+                    <span class="md-headline">Firmware Settings</span>
+                    <div class="md-subhead">Please give more info about factory resets.</div>
+                </md-card-title-text>
+            </md-card-header>
+
+            <md-card-actions layout="row" class="settings-card-actions" >
+                <md-radio-group layout="column" class=" md-primary">
+                    <md-radio-button value="Apple">Factory Reset Cell</md-radio-button>
+                    <md-radio-button value="Banana">Factory Reset Telematics</md-radio-button>
+                    <md-radio-button value="Mango">Factory Reset General Settings</md-radio-button>
+                </md-radio-group>
+            </md-card-actions>
+            <md-card-actions layout="row" layout-align="end">
+                <md-button class="md-raised md-primary">RESET</md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<!-- Modal -->
+<div class="modal fade" id="addBox" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h4 class="f-700">Add Network</h4>
+                    <small>Please provide some sort of guidance s</small>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Network Name">
+                    </div>
+                    <div class="form-group select ">
+                        <select class="form-control">
+                            <option>Select</option>
+                            <option>1</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                       
+                    </div>
+                </form>
+                <table ng-table="nc.network" class="table table-condensed table-striped nc-table add-table-head">
+                    <tr ng-repeat="user in $data">
+                        <td title="'Choose a Network'" class="text-left"><i class="zmdi zmdi-wifi-alt f-16"></i> {{user.networkType}}
+                        </td>
+                        <td title="'Security'" class="text-right">
+                            {{user.security }}
+                        </td>
+                    </tr>
+                </table>
+                <div class="row container-fluid m-t-10">
+                    <form>
+                        <input type="password" class="form-control" placeholder="Enter Password">
+                    </form>
+                    <p class="m-t-10">Advanced Options</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default"><a>Cancel</a></button>
+                <button type="button" data-dismiss="modal" class="btn btn-primary">SAVE NETWORK</button>
+            </div>
+        </div>
+    </div>
+</div>
